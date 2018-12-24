@@ -27,6 +27,7 @@ export * from './InlineHelp';
 export * from './Tile';
 export * from './TileGrid';
 export * from './SearchInput';
+export * from './ContextualMenu';
 export * from './Pagination';
 export * from './Calendar';
 
@@ -63,6 +64,7 @@ import * as Layout from './Layout';
 import * as Tile from './Tile';
 import * as TileGrid from './TileGrid';
 import * as SearchInput from './SearchInput';
+import * as ContextualMenu from './ContextualMenu';
 import { version, libName } from '@/config';
 import * as Pagination from './Pagination';
 import { env } from '@/config';
@@ -98,6 +100,7 @@ export const all = {
     ...ListGroup,
     ...Tile,
     ...TileGrid,
+    ...ContextualMenu,
     ...Pagination,
 };
 

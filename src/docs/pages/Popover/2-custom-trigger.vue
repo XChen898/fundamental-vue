@@ -5,10 +5,14 @@
 <div>
   <FdPopover>
     <FdButton styling="emphasized" type="positive" slot="control">Custom Popover Trigger Control</FdButton>
-    <FdMenuItem>Option 1</FdMenuItem>
-    <FdMenuItem>Option 2</FdMenuItem>
-    <FdMenuItem>Option 3</FdMenuItem>
-    <FdMenuItem>Option 4</FdMenuItem>
+    <FdMenu>
+      <FdMenuList>
+        <FdMenuItem>Option 1</FdMenuItem>
+        <FdMenuItem>Option 2</FdMenuItem>
+        <FdMenuItem>Option 3</FdMenuItem>
+        <FdMenuItem>Option 4</FdMenuItem>
+      </FdMenuList>
+    </FdMenu>
   </FdPopover>
 </div>
 </template>
