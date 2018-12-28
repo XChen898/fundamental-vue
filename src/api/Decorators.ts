@@ -86,10 +86,10 @@ export const defaultSlot = (description: string) => {
   return slot('', description);
 };
 
-export const mixins = (..._mixins: TsxComponentType[]) => {
+export const Mixins = (...mixins: TsxComponentType[]) => {
   return createDecorator(options => {
     withComponentDocumentation(options, documentation => {
-      _mixins.forEach(mixin => {
+      mixins.forEach(mixin => {
         documentation.addMixin(mixin.name);
       });
     });

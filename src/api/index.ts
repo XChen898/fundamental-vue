@@ -8,13 +8,13 @@ export { SlotDocumentation } from './SlotDocumentation';
 // Workaround is to export *.
 export * from './PropDocumentation';
 
-import { model, component, event, defaultSlot, slot, prop, mixins } from './Decorators';
+import { model, component, event, defaultSlot, slot, prop, Mixins } from './Decorators';
 export const Doc = {
   event,
   slot,
   defaultSlot,
   component,
   prop,
-  mixins,
+  Mixins,
   model,
 };

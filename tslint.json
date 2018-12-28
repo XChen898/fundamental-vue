@@ -1,8 +1,7 @@
 {
   "defaultSeverity": "warning",
   "extends": [
-    "tslint:recommended",
-    "tslint-react"
+    "tslint:recommended"
   ],
   "linterOptions": {
     "exclude": [
@@ -11,41 +10,32 @@
     ]
   },
   "rules": {
-    "no-unused-variable": true,
-    "no-debugger": false,
-    "max-classes-per-file": false,
-    "variable-name": false,
-    "no-empty": false,
-    "member-ordering": false,
-    "arrow-parens": [
-      true,
-      "ban-single-arg-parens"
-    ],
-    "jsx-no-multiline-js": false,
-    "jsx-no-lambda": false,
-    "max-line-length": false,
-    "no-console": false,
-    "quotemark": [
-      true,
-      "single"
-    ],
-    "indent": [
-      true,
-      "spaces",
-      2
-    ],
-    "whitespace": [
-      true,
-      "check-module"
-    ],
+    // This allows things like:
+    //   const { x } = this;
+    //   x && x.printHelp();
+    "no-unused-expression": [true, "allow-fast-null-checks"],
+    // This disables TSLint's insane whitespace rules.
+    // I would love to have consistent whitespace but somehow I haven't
+    // found out how to configure TSLint to fit my (very special) needs.
+    "whitespace": false,
+    // This disables parens in arrow expressions.
+    // For simple arrow expressions this make the code much more readable.
+    //   const x = y = -1 * y;
+    // vs.
+    //   const x = (y) = -1 * y;
+    "arrow-parens": false,
+    // If this is enabled you cannot use `type` to define a new type.
     "interface-over-type-literal": false,
-    "jsx-alignment": true,
-    "prefer-for-of": true,
-    "no-parameter-reassignment": true,
-    "import-spacing": true,
+    // Long lines are good. They help to make long strings searchable.
+    "max-line-length": false,
+    // Sometimes it is useful to have more than once class per file.
+    "max-classes-per-file": false,
+    "member-ordering": false,
+    "quotemark": [true, "single"],
+    "indent": [true, "spaces", 2],
     "interface-name": false,
     "ordered-imports": false,
     "object-literal-sort-keys": false,
-    "no-consecutive-blank-lines": true
+    "no-consecutive-blank-lines": false
   }
 }

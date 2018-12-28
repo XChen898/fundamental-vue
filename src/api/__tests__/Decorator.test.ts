@@ -4,9 +4,7 @@ import { Component, Prop, Base } from '@/core';
 describe('Documentation of', () => {
   describe('TestComponent', () => {
 
-    class Person {
-
-    }
+    class Person { }
 
     @Component('TestComponent')
     class TestComponent extends Base {

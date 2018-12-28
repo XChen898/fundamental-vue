@@ -22,7 +22,7 @@ type APIPropOptions = Readonly<{
     readableDefaultValue?: DefaultValue;
 }>;
 
-const __unspecifiedValue = Symbol();
+const unspecifiedValue = Symbol();
 
 type Options = PropOptions<any> & {
   readableDefaultValue?: string | number;
@@ -32,7 +32,7 @@ type Options = PropOptions<any> & {
 export class PropDocumentation<T = any> {
   public vueTypes: Prop<any> | Array<Prop<any>> | null = null;
   public readonly key: string;
-  public static unspecifiedValue(): symbol { return __unspecifiedValue; }
+  public static unspecifiedValue(): symbol { return unspecifiedValue; }
   public description = '';
   public required = false;
   public defaultValue: T | null | undefined | (() => T | null | undefined);
