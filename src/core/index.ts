@@ -1,14 +1,7 @@
 import Vue from 'vue';
 import TsxComponent from '@/vue-tsx';
-import { Doc } from '@/api';
 
-export const Component = Doc.component;
-export const DefaultSlot = Doc.defaultSlot;
-export const Slot = Doc.slot;
-export const Event = Doc.event;
-export const Prop = Doc.prop;
-export const Mixins = Doc.mixins;
-export const Model = Doc.model;
+export * from '@/api';
 
 // Re-exporting for convenience
 export { Vue };
